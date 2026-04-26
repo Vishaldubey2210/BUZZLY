@@ -10,6 +10,7 @@ interface AuthContextType {
   login: (credentials: any) => Promise<void>;
   signup: (userData: any) => Promise<void>;
   logout: () => Promise<void>;
+  updateUser: (data: Partial<User>) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -59,6 +60,10 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }
   };
 
+  const updateUser = (data: Partial<User>) => {
+    setUser(prev => prev ? { ...prev, ...data } : prev);
+  };
+
   return (
     <AuthContext.Provider value={{
       user,
@@ -67,6 +72,7 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
       login,
       signup,
       logout,
+      updateUser,
     }}>
       {children}
     </AuthContext.Provider>

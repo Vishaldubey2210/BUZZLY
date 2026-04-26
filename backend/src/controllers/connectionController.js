@@ -6,7 +6,8 @@ const { sendSuccess, sendCreated } = require('../utils/response');
 class ConnectionController {
   async sendRequest(req, res, next) {
     try {
-      const connection = await connectionService.sendRequest(req.user._id, req.params.userId);
+      let io; try { io = require('../sockets').getIo(); } catch {}
+      const connection = await connectionService.sendRequest(req.user._id, req.params.userId, io);
       sendCreated(res, { data: connection, message: 'Connection request sent' });
     } catch (error) {
       next(error);
@@ -15,7 +16,8 @@ class ConnectionController {
 
   async acceptRequest(req, res, next) {
     try {
-      const connection = await connectionService.acceptRequest(req.params.id, req.user._id);
+      let io; try { io = require('../sockets').getIo(); } catch {}
+      const connection = await connectionService.acceptRequest(req.params.id, req.user._id, io);
       sendSuccess(res, { data: connection, message: 'Request accepted' });
     } catch (error) {
       next(error);
@@ -24,9 +26,8 @@ class ConnectionController {
 
   async rejectRequest(req, res, next) {
     try {
-      // Simplified for MVP: just delete the request if rejected
-      // Or change status to rejected
-      next();
+      const connection = await connectionService.rejectRequest(req.params.id, req.user._id);
+      sendSuccess(res, { data: connection, message: 'Request declined' });
     } catch (error) {
       next(error);
     }

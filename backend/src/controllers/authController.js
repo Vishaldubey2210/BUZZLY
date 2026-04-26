@@ -59,15 +59,40 @@ class AuthController {
     }
   }
 
-  // Basic structure for MVP, normally would read cookie and issue new token
   async refresh(req, res, next) {
     try {
       const refreshToken = req.cookies.jwt;
       if (!refreshToken) {
         return res.status(401).json({ success: false, message: 'No refresh token' });
       }
-      // Issue new token logic...
-      sendSuccess(res, { message: 'Token refreshed' });
+
+      const { verifyRefreshToken, generateTokenPair } = require('../utils/jwt');
+      const User = require('../models/User');
+
+      let decoded;
+      try {
+        decoded = verifyRefreshToken(refreshToken);
+      } catch {
+        return res.status(401).json({ success: false, message: 'Invalid or expired refresh token' });
+      }
+
+      const user = await User.findById(decoded.sub).select('+refreshToken');
+      if (!user || user.refreshToken !== refreshToken) {
+        return res.status(401).json({ success: false, message: 'Refresh token mismatch' });
+      }
+
+      const tokens = generateTokenPair(user._id);
+      user.refreshToken = tokens.refreshToken;
+      await user.save();
+
+      res.cookie('jwt', tokens.refreshToken, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'strict',
+        maxAge: 30 * 24 * 60 * 60 * 1000,
+      });
+
+      sendSuccess(res, { data: { accessToken: tokens.accessToken }, message: 'Token refreshed' });
     } catch (error) {
       next(error);
     }

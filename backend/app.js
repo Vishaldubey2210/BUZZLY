@@ -17,6 +17,11 @@ const postRoutes = require('./src/routes/posts');
 const connectionRoutes = require('./src/routes/connections');
 const messageRoutes = require('./src/routes/messages');
 const notificationRoutes = require('./src/routes/notifications');
+const eventRoutes = require('./src/routes/events');
+const searchRoutes = require('./src/routes/search');
+const venueRoutes = require('./src/routes/venues');
+const mentorRoutes = require('./src/routes/mentors');
+const roomRoutes = require('./src/routes/rooms');
 
 const app = express();
 
@@ -47,6 +52,11 @@ app.use(`${API_PREFIX}/posts`, postRoutes);
 app.use(`${API_PREFIX}/connections`, connectionRoutes);
 app.use(`${API_PREFIX}/messages`, messageRoutes);
 app.use(`${API_PREFIX}/notifications`, notificationRoutes);
+app.use(`${API_PREFIX}/events`, eventRoutes);
+app.use(`${API_PREFIX}/search`, searchRoutes);
+app.use(`${API_PREFIX}/venues`, venueRoutes);
+app.use(`${API_PREFIX}/mentors`, mentorRoutes);
+app.use(`${API_PREFIX}/rooms`, roomRoutes);
 
 // Health check
 app.get('/health', (req, res) => {

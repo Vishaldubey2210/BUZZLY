@@ -7,6 +7,7 @@ const User = require('../models/User');
 const logger = require('../utils/logger');
 const chatHandler = require('./chatHandler');
 const notificationHandler = require('./notificationHandler');
+const roomHandler = require('./roomHandler');
 
 let io;
 
@@ -56,6 +57,7 @@ const initSocket = (server) => {
     // Register handlers
     chatHandler(io, socket);
     notificationHandler(io, socket);
+    roomHandler(io, socket);
 
     socket.on('disconnect', async () => {
       logger.info(`Socket disconnected: ${socket.id}`);
