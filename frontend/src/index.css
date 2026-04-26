@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-background: #0a0600;
+    --bg-card: #110a02;
+    --border-color: rgba(251, 191, 36, 0.1);
+    --border-bright: rgba(251, 191, 36, 0.3);
+    
+    --amber-400: #fbbf24;
+    --amber-500: #f59e0b;
+    --amber-hot: #ff6b1a;
+
+    --navy-800: #0f172a;
+    --navy-900: #020617;
+    
+    --grad-amber: linear-gradient(135deg, var(--amber-400), var(--amber-hot));
+  }
+
+  body {
+    @apply bg-background text-white antialiased;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(251, 191, 36, 0.2);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(251, 191, 36, 0.4);
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-br from-amber-400 to-amber-hot text-[#0a0600] shadow-[0_4px_15px_rgba(251,191,36,0.25)] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(251,191,36,0.4)];
+  }
+  
+  .btn-secondary {
+    @apply bg-white/5 border border-amber-400/30 text-amber-400 hover:bg-amber-400/10 hover:border-amber-400/50;
+  }
+  
+  .btn-ghost {
+    @apply bg-transparent border border-transparent text-gray-400 hover:text-white hover:bg-white/5;
+  }
+
+  .input {
+    @apply w-full bg-white/5 border border-white/10 rounded-full px-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500/50 transition-all;
+  }
+
+  .card {
+    @apply bg-card border border-white/10 rounded-xl overflow-hidden;
+  }
+}
