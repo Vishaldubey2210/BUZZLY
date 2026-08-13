@@ -228,3 +228,98 @@ The backend exposes a structured API under the `/api/v1` namespace:
 | **Rooms** | `GET` | `/api/v1/rooms` | List active virtual party rooms | ✅ Yes |
 
 ---
+
+## 🗄️ Database Schemas & Data Models
+
+BUZZLY uses MongoDB with Mongoose ODM schemas for flexible document management:
+
+- 👤 **User**: Credentials, profiles, XP, level, badges array, drink journey history, followers/following refs.
+- 📝 **Post**: Author reference, content, media attachments, drink category, vibe tag, likes array, hashtag index, comment count.
+- 💬 **Conversation & Message**: Participants array, last message ref, message sender, text content, read receipts.
+- 🎓 **MentorProfile & Session**: User ref, expertise tags, hourly rate, bio, availability slots, session status (`pending`, `confirmed`, `completed`).
+- 🎉 **Room**: Name, host ref, YouTube video URL, playback state, participant list, public/private access mode.
+- 📍 **Venue**: 2D Geospatial GeoJSON point coordinates (`Point`), amenities, ratings, pricing, operational hours.
+- 📅 **Event**: Host ref, category, date, venue details, capacity limit, attendee IDs array.
+
+---
+
+## ⚙️ Local Installation & Setup Guide
+
+### 📋 Prerequisites
+
+Ensure you have the following installed on your system:
+- **Node.js** (v18.0.0 or higher)
+- **npm** (v9.0.0 or higher)
+- **MongoDB** (Local instance or MongoDB Atlas Connection URI)
+
+---
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Vishaldubey2210/BUZZLY.git
+cd BUZZLY
+```
+
+---
+
+### 2️⃣ Backend Setup & Database Seeding
+
+Navigate to the `backend` directory, install dependencies, configure environment variables, and seed test data:
+
+```bash
+cd backend
+npm install
+
+# Create environment configuration
+cp .env.example .env
+```
+
+Edit your `backend/.env` file:
+```env
+PORT=5000
+NODE_ENV=development
+MONGO_URI=mongodb://localhost:27017/buzzly
+JWT_SECRET=your_super_secret_jwt_key_buzzly_2026
+JWT_EXPIRE=7d
+CORS_ORIGIN=http://localhost:5173
+```
+
+Run database seeder to populate sample users, posts, venues, and events:
+```bash
+npm run seed
+```
+
+Start the backend dev server:
+```bash
+npm run dev
+```
+*The backend API will run at `http://localhost:5000`.*
+
+---
+
+### 3️⃣ Frontend Setup & Execution
+
+Open a new terminal window, navigate to `frontend`, install dependencies, and start Vite dev server:
+
+```bash
+cd frontend
+npm install
+
+# Create environment configuration
+cp .env.example .env
+```
+
+Edit your `frontend/.env` file:
+```env
+VITE_API_URL=http://localhost:5000/api/v1
+VITE_SOCKET_URL=http://localhost:5000
+```
+
+Start Vite dev server:
+```bash
+npm run dev
+```
+*The web app will open at `http://localhost:5173`.*
+
+---
