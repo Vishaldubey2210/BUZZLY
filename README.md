@@ -105,3 +105,14 @@ BUZZLY connects community members with verified mentors for skill sharing, caree
 - ⚡ **Become a Mentor**: Any user can apply to become a mentor, set custom rates, and open booking slots.
 
 ---
+
+### 🎉 Virtual Party Rooms & Synced Video
+
+Experience remote group hangouts with interactive virtual party rooms (`/party`):
+
+- 📺 **Synchronized Video Player**: Embedded YouTube player synchronized across all room participants via WebSockets.
+- 💬 **Live Room Chat**: Dedicated group chat for party attendees with real-time text, reactions, and emoji support.
+- 🎙️ **Host Control Panel**: Room creator privileges to change video playback URL, play/pause state, kick members, and manage room settings.
+- 🔒 **Public & Private Rooms**: Create public community rooms or password-protected private party lounges.
+
+---
