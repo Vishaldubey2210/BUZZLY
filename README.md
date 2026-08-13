@@ -323,3 +323,36 @@ npm run dev
 *The web app will open at `http://localhost:5173`.*
 
 ---
+
+## 🔐 Security & Reliability Measures
+
+BUZZLY implements defense-in-depth security best practices across all system tiers:
+
+- 🛡️ **HTTP Security Headers**: Powered by **Helmet** to protect against cross-site scripting (XSS), clickjacking, and MIME sniffing.
+- ⚡ **Rate Limiting**: **Express-Rate-Limit** applied to API endpoints to prevent brute-force attacks and abuse.
+- 🔑 **Secure Authentication**: Passwords hashed with **BcryptJS** (cost factor 12) and stateless **JWT** token verification.
+- 🔒 **CORS Configuration**: Restrictive Cross-Origin Resource Sharing policy scoped strictly to trusted frontend origins.
+- 📜 **Structured Logging**: Production logging using **Winston** and HTTP request logging via **Morgan**.
+- 🛡️ **Request Input Validation**: Data schemas validated with **Zod** prior to database operations.
+
+---
+
+## 🤝 Contributing & License
+
+Contributions are welcome! If you'd like to improve BUZZLY or add new features:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing new feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+### 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+<p align="center">
+  Crafted with ❤️ by <a href="https://github.com/Vishaldubey2210"><b>Vishal Dubey</b></a>
+</p>
