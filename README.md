@@ -136,3 +136,32 @@ Find top-rated local establishments, rooftop bars, microbreweries, and quiet co-
 - 🗺️ **Integrated Navigation**: Instant map directions and community post links for each venue.
 
 ---
+
+### 🏆 Gamified Leaderboard & Reputation
+
+BUZZLY incorporates gamification to recognize top contributors and active community leaders (`/leaderboard`):
+
+- 📈 **XP & Progression System**: Earn Experience Points (XP) through posts, event attendance, and mentorship.
+- 🥇 **Tiered Rankings**: Top users leaderboard broken down by **Global Top Members**, **Weekly Rising Stars**, and **Top Mentors**.
+- 🏅 **Achievement Badges**: Unlock custom profile badges such as `First Pour 🍺`, `Rising Star ⭐`, `Buzz Starter 🌟`, and `Buzz Legend 👑`.
+
+---
+
+### 👤 Profile & Social Network Graph
+
+Customizable user identity and social networking primitives (`/profile` & `/profile/:userId`):
+
+- 🎨 **Rich Profile Customization**: Update bio, avatar, background banner, city, headline, preferences, and social links.
+- 🤝 **Connection Network**: Send connection requests ("Pour Requests"), build mutual connections, and follow creators.
+- 📁 **Personal Repository**: Dedicated profile tabs for **User Posts**, **Saved Bookmarks**, **Attending Events**, and **Media Gallery**.
+
+---
+
+### 🔔 Instant Notifications & Smart Search
+
+Stay up to date with ecosystem activities:
+
+- 🔔 **Activity Center**: Notifications for post likes, comments, connection requests, event updates, and mention alerts.
+- 🔍 **Global Multi-Entity Search**: Fast unified search engine across Users, Posts, Events, Venues, and Hashtags (`/search`).
+
+---
