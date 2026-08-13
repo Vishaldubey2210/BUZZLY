@@ -57,3 +57,17 @@ You can log in directly using any of the following seeded user credentials:
 > 💡 *Note: You can also register a new account instantly via `/signup` with custom avatar generation powered by DiceBear.*
 
 ---
+
+## ✨ Key Platform Features
+
+### 📰 Interactive Social Feed & Posts
+
+The central hub of BUZZLY features a dynamic, multi-tabbed media feed supporting rich content creation and community engagement:
+
+- 📝 **Rich Post Creation**: Share thoughts, attach photos/videos, add venue tags, and set vibe categories (`Lit`, `Chill`, `Classy`, `Wild`, `Cozy`, `Rooftop`).
+- 🏷️ **Hashtag Indexing**: Automatic extraction and clickable hashtags for topic aggregation.
+- 🗂️ **Feed Categorization**: Filter feed content by **All Posts**, **Following**, **Trending**, or **Media Only**.
+- ⚡ **Interactive Engagement**: Like posts, write nested comments, bookmark posts to personal collection, share posts, and report inappropriate content.
+- 🎯 **XP Rewards**: Posting content and receiving engagement earns community XP points to level up user badges.
+
+---
