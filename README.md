@@ -116,3 +116,23 @@ Experience remote group hangouts with interactive virtual party rooms (`/party`)
 - 🔒 **Public & Private Rooms**: Create public community rooms or password-protected private party lounges.
 
 ---
+
+### 📅 Events Management & Ticketing
+
+Discover and host local or virtual community events (`/events`):
+
+- 🎟️ **Event Creation**: Host beer festivals, wine tastings, masterclasses, and music nights with date, location, category, banner image, and ticket capacity.
+- 🎯 **Category Filtering**: Instant filter tags for Craft Beer, Fine Wine, Spirits, Mixology, and Sober Social events.
+- ✋ **RSVP & Attendance**: One-click RSVP system tracking attendee avatars, guest lists, and event reminders.
+
+---
+
+### 📍 Local Venues & Hotspot Discovery
+
+Find top-rated local establishments, rooftop bars, microbreweries, and quiet co-working spaces (`/venues`):
+
+- 🏙️ **City Hotspots**: Curated listing of venues in Mumbai, Bengaluru, Delhi, Goa, Hyderabad, Kolkata, and Chennai.
+- ⭐ **Ratings & Amenities**: Detailed profiles showcasing operational hours, price range (`₹₹` to `₹₹₹₹`), specialties, verified tags, and guest ratings.
+- 🗺️ **Integrated Navigation**: Instant map directions and community post links for each venue.
+
+---
