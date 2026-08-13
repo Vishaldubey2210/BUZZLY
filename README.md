@@ -26,7 +26,7 @@
   - [📍 Local Venues \& Hotspot Discovery](#-local-venues--hotspot-discovery)
   - [🏆 Gamified Leaderboard \& Reputation](#-gamified-leaderboard--reputation)
   - [👤 Profile \& Social Network Graph](#-profile--social-network-graph)
-  - [🔔 Instant Notifications \& Smart Search](#-instant-notifications--smart-search)
+  - [🔔 Instant Notifications \& Smart Search](#-instant-notifications--search)
 - [🛠️ Tech Stack \& System Architecture](#️-tech-stack--system-architecture)
 - [📡 REST API Endpoints Overview](#-rest-api-endpoints-overview)
 - [🗄️ Database Schemas \& Data Models](#️-database-schemas--data-models)
@@ -69,5 +69,17 @@ The central hub of BUZZLY features a dynamic, multi-tabbed media feed supporting
 - 🗂️ **Feed Categorization**: Filter feed content by **All Posts**, **Following**, **Trending**, or **Media Only**.
 - ⚡ **Interactive Engagement**: Like posts, write nested comments, bookmark posts to personal collection, share posts, and report inappropriate content.
 - 🎯 **XP Rewards**: Posting content and receiving engagement earns community XP points to level up user badges.
+
+---
+
+### 💬 Real-Time Direct Messaging
+
+BUZZLY features a full-fledged bi-directional chat engine powered by **Socket.io** WebSockets:
+
+- 💬 **Instant 1-on-1 Chat**: Low-latency direct messaging between connected users.
+- 🟢 **Live Online/Offline Presence**: See connected status of friends and community members in real-time.
+- ✍️ **Typing Indicators**: Visual feedback when the conversation partner is drafting a message.
+- 📦 **Conversation Management**: Search chat history, view recent conversation lists with timestamping, unread counts, and avatar previews.
+- 🔒 **Secure Transport**: Encrypted WebSockets connection with JWT authentication handshake.
 
 ---
