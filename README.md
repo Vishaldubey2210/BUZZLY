@@ -165,3 +165,66 @@ Stay up to date with ecosystem activities:
 - 🔍 **Global Multi-Entity Search**: Fast unified search engine across Users, Posts, Events, Venues, and Hashtags (`/search`).
 
 ---
+
+## 🛠️ Tech Stack & System Architecture
+
+BUZZLY is designed with a modern decoupled architecture ensuring high scalability, rapid rendering, real-time sync, and security:
+
+```
+                  ┌────────────────────────────────────────┐
+                  │             Client Layer               │
+                  │   React 18 + TypeScript + Vite         │
+                  │   Tailwind CSS + Leaflet + Lucide      │
+                  └───────────────────┬────────────────────┘
+                                      │
+                         ┌────────────┴────────────┐
+                         │  HTTPS REST / WSS Sockets│
+                         └────────────┬────────────┘
+                                      │
+                  ┌───────────────────▼────────────────────┐
+                  │            Backend Layer               │
+                  │   Node.js + Express.js API           │
+                  │   Socket.io + JWT Auth + Helmet        │
+                  └───────────────────┬────────────────────┘
+                                      │
+                         ┌────────────┴────────────┐
+                         │    Database Layer       │
+                         │    MongoDB + Mongoose   │
+                         └─────────────────────────┘
+```
+
+### 💻 Technology Breakdown
+
+| Component | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend UI** | **React 18 & TypeScript** | Component-driven frontend with strong type safety and modern hooks |
+| **Styling & Icons** | **Tailwind CSS & Lucide React** | Sleek dark-mode aesthetic, responsive layouts, and modern icons |
+| **Maps & Analytics** | **Leaflet, React-Leaflet & Recharts** | Interactive OpenStreetMap integration and analytics visualizer |
+| **Real-time Comms** | **Socket.io & Socket.io-Client** | Event-driven WebSockets transport for chat, presence & sync video |
+| **Backend Runtime** | **Node.js & Express.js** | Modular RESTful API server with middleware architecture |
+| **Database & ORM** | **MongoDB & Mongoose ODM** | Scalable NoSQL document database with schema validation |
+| **Security & Auth** | **JWT, BcryptJS, Helmet & Rate Limiter** | Token auth, HttpOnly cookies, HTTP security headers & rate limiting |
+
+---
+
+## 📡 REST API Endpoints Overview
+
+The backend exposes a structured API under the `/api/v1` namespace:
+
+| Module | Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :--- | :--- |
+| **Auth** | `POST` | `/api/v1/auth/signup` | Register new user account | ❌ No |
+| **Auth** | `POST` | `/api/v1/auth/login` | Authenticate user & issue JWT | ❌ No |
+| **Auth** | `GET` | `/api/v1/auth/me` | Retrieve current authenticated user | ✅ Yes |
+| **Users** | `GET` | `/api/v1/users` | List users / search by filters | ✅ Yes |
+| **Users** | `GET` | `/api/v1/users/:id` | Get public user profile | ✅ Yes |
+| **Posts** | `GET` | `/api/v1/posts` | Fetch paginated feed posts | ✅ Yes |
+| **Posts** | `POST` | `/api/v1/posts` | Create new post | ✅ Yes |
+| **Posts** | `POST` | `/api/v1/posts/:id/like` | Like/Unlike post | ✅ Yes |
+| **Messages**| `GET` | `/api/v1/messages/conversations` | Get active user chat list | ✅ Yes |
+| **Events** | `GET` | `/api/v1/events` | List upcoming events | ✅ Yes |
+| **Venues** | `GET` | `/api/v1/venues` | Search local venues | ✅ Yes |
+| **Mentors** | `GET` | `/api/v1/mentors` | List available mentors | ✅ Yes |
+| **Rooms** | `GET` | `/api/v1/rooms` | List active virtual party rooms | ✅ Yes |
+
+---
