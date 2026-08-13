@@ -94,3 +94,14 @@ Explore the physical world around you with BUZZLY's interactive map interface po
 - 📍 **Location Permission Prompt**: Graceful geolocation access request with fallback default cities (Mumbai, Bengaluru, Delhi, Goa).
 
 ---
+
+### 🎓 Mentorship Hub & Scheduling
+
+BUZZLY connects community members with verified mentors for skill sharing, career advice, mixology guidance, and industry insights:
+
+- 🧑‍🏫 **Mentor Directory**: Browse top-rated mentors filtered by expertise (Wine Sommelier, Craft Brewing, Mixology, Career Guidance).
+- 📅 **Session Booking**: Select interactive time slots, specify session topic, and submit session booking requests.
+- 💼 **Mentor Journey Profile**: Highlight experience timeline, current role, previous positions, hourly rate, and client reviews.
+- ⚡ **Become a Mentor**: Any user can apply to become a mentor, set custom rates, and open booking slots.
+
+---
