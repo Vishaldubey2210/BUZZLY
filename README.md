@@ -33,3 +33,27 @@
 - [⚙️ Local Installation \& Setup Guide](#️-local-installation--setup-guide)
 - [🔐 Security \& Reliability Measures](#-security--reliability-measures)
 - [🤝 Contributing \& License](#-contributing--license)
+
+---
+
+## 🚀 Live Demo & Test Credentials
+
+BUZZLY is live and hosted on cloud infrastructure! You can test all features live:
+
+- 🌐 **Live Web Application**: [https://buzzly-1-un7t.onrender.com/login](https://buzzly-1-un7t.onrender.com/login)
+
+### 🔑 Pre-Seeded Test Accounts
+
+You can log in directly using any of the following seeded user credentials:
+
+| Account Role | Email Address | Password | Profile Specialty |
+| :--- | :--- | :--- | :--- |
+| **Primary Admin / User** | `arjun@buzzly.app` | `Buzzly@123` | Craft Beer Enthusiast & Mumbai Local |
+| **Sommelier & Mentor** | `priya@buzzly.app` | `Buzzly@123` | Wine Sommelier & Tasting Educator |
+| **Whiskey Specialist** | `rohan@buzzly.app` | `Buzzly@123` | Single Malt Collector & Curator |
+| **Mixologist** | `ananya@buzzly.app` | `Buzzly@123` | Cocktail Aficionado |
+| **Beach Bar Expert** | `dev@buzzly.app` | `Buzzly@123` | Goa Sunset Mixologist (Level 5 Legend) |
+
+> 💡 *Note: You can also register a new account instantly via `/signup` with custom avatar generation powered by DiceBear.*
+
+---
