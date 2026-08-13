@@ -26,7 +26,7 @@
   - [📍 Local Venues \& Hotspot Discovery](#-local-venues--hotspot-discovery)
   - [🏆 Gamified Leaderboard \& Reputation](#-gamified-leaderboard--reputation)
   - [👤 Profile \& Social Network Graph](#-profile--social-network-graph)
-  - [🔔 Instant Notifications \& Smart Search](#-instant-notifications--search)
+  - [🔔 Instant Notifications \& Smart Search](#-instant-notifications--smart-search)
 - [🛠️ Tech Stack \& System Architecture](#️-tech-stack--system-architecture)
 - [📡 REST API Endpoints Overview](#-rest-api-endpoints-overview)
 - [🗄️ Database Schemas \& Data Models](#️-database-schemas--data-models)
@@ -81,5 +81,16 @@ BUZZLY features a full-fledged bi-directional chat engine powered by **Socket.io
 - ✍️ **Typing Indicators**: Visual feedback when the conversation partner is drafting a message.
 - 📦 **Conversation Management**: Search chat history, view recent conversation lists with timestamping, unread counts, and avatar previews.
 - 🔒 **Secure Transport**: Encrypted WebSockets connection with JWT authentication handshake.
+
+---
+
+### 🗺️ Interactive Geolocation Map
+
+Explore the physical world around you with BUZZLY's interactive map interface powered by **Leaflet** & **OpenStreetMap**:
+
+- 📍 **Real-Time Geolocation Radar**: Discover active community members, nearby hotspots, events, and venues within your city or customizable search radius.
+- 🗺️ **Custom Map Pins & Popups**: Distinct visual markers for users, breweries, rooftop lounges, and live events.
+- 🔍 **Radius & Filter Controls**: Filter map pins by distance (1 km to 50 km) and category type (Beer, Wine, Spirits, Cocktails, Non-Alcoholic).
+- 📍 **Location Permission Prompt**: Graceful geolocation access request with fallback default cities (Mumbai, Bengaluru, Delhi, Goa).
 
 ---
